@@ -1,4 +1,14 @@
 *
 
-!vimrc
+# Bash
+!.bashrc
+
+# Vim
+!.vim
+!.vim/vimrc
+
+# i3
+!.i3status.conf
+
 !.gitignore
+
