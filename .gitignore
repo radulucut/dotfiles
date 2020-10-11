@@ -2,10 +2,12 @@
 
 # Bash
 !.bashrc
+!.bash_aliases
 
 # Vim
 !.vim
 !.vim/vimrc
+!.vim/templates/*
 
 # i3
 !.i3status.conf

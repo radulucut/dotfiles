@@ -28,5 +28,24 @@ set background=dark
 set number
 set t_Co=256
 
-syntax on
+autocmd FileType markdown setlocal spell spelllang=en_us
 
+" Journal
+function! AddJournalTimestamp()
+	execute 'normal gg'
+	let timestamp = '#' . ' ' . strftime('%A, %d %b %Y')
+	call setline(1, timestamp)
+	execute 'normal G'
+	execute 'normal o'
+endfunction
+
+augroup journal
+	autocmd!
+
+	autocmd BufNewFile */journal/** 0r ~/.vim/templates/today.skeleton
+
+	autocmd BufNewFile */journal/** call AddJournalTimestamp()
+augroup end
+" End Journal
+
+syntax on
