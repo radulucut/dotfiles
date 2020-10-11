@@ -7,6 +7,7 @@
 # Vim
 !.vim
 !.vim/vimrc
+!.vim/templates
 !.vim/templates/*
 
 # i3
