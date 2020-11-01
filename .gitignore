@@ -13,5 +13,8 @@
 # i3
 !.i3status.conf
 
+# tmux
+!.tmux.conf
+
 !.gitignore
 
