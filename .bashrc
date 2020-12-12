@@ -121,3 +121,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export LC_TIME=en_US.UTF-8
+
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+# Otherwise start tmux
+[[ -z "$TMUX" ]] && exec tmux
