@@ -1,31 +1,13 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'mhartington/oceanic-next'
+Plug 'fatih/vim-go', { 'do': ':goupdatebinaries' }
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'andreasvc/vim-256noir'
-Plugin 'tpope/vim-surround'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Valloric/YouCompleteMe'
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" Put your non-Plugin stuff after this line
-
-colorscheme 256_noir
-
-set background=dark
 set t_Co=256
+syntax enable
+colorscheme OceanicNext
 
 set cursorline
 set wildmenu
@@ -63,6 +45,4 @@ augroup templates
 
 	au BufNewFile *.svelte 0r ~/.vim/templates/svelte.skeleton
 augroup end
-
-syntax on
 

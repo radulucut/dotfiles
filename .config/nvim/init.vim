@@ -1,23 +1,13 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'mhartington/oceanic-next'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':goupdatebinaries' }
 
 call plug#end()
 
+set t_Co=256
 syntax enable
 colorscheme OceanicNext
-
-hi Normal guibg=NONE ctermbg=NONE
-hi LineNr guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
-
-set t_Co=256
-
-if (has("termguicolors"))
- set termguicolors
-endif
 
 set cursorline
 set wildmenu

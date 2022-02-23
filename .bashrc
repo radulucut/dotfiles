@@ -125,4 +125,7 @@ export LC_TIME=en_US.UTF-8
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 # Otherwise start tmux
-[[ -z "$TMUX" ]] && exec tmux
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX
+fi
