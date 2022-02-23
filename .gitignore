@@ -4,6 +4,9 @@
 !.bashrc
 !.bash_aliases
 
+# zsh
+!.zshrc
+
 # Nvim
 !.config
 !.config/nvim
