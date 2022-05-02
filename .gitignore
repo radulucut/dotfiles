@@ -6,6 +6,7 @@
 
 # zsh
 !.zshrc
+!.zshrc.pre-oh-my-zsh
 
 # Nvim
 !.config
