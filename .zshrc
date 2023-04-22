@@ -1,6 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 export GOPATH="$HOME/go"
 
+alias g="git"
+alias gs="git status"
+
+alias cfg="nvim ~/.config/nvim/init.lua"
+
 ZSH_THEME="robbyrussell"
 plugins=(git)
 
